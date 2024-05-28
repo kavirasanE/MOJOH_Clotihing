@@ -1,16 +1,15 @@
-import React from 'react'
+import React from "react";
+import IDMS from "../assets/logo/IDMS.png";
 
 import { Card } from "flowbite-react";
-const GridCard = () => {
+const GridCard = ({ datas, index }) => {
   return (
-    <div className=''>
-         <Card href="#" className="max-w-xs w-64 h-40" >
-      <h5 className="text-xl tracking-tight text-gray-900 dark:text-white">
-        Noteworthy technology acquisitions 2021
-      </h5>
-    </Card>
+    <div key={index}>
+      <Card href={datas.url} target="_blank" className="max-w-xs w-64 h-40">
+        <p className="text-center">{datas.name}</p>
+      </Card>
     </div>
-  )
-}
+  );
+};
 
-export default GridCard
+export default GridCard;
