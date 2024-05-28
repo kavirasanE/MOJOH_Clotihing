@@ -154,7 +154,7 @@ const DisplayContent = () => {
   };
   return (
     <div>
-      <div className=" flex flex-row justify-between items-center px-24 p-5 ">
+      <div className=" flex flex-col md:flex-row justify-between items-center lg:px-24 gap-4 p-5 ">
         <TextInput
           icon={HiSearch}
           type="search"
@@ -175,8 +175,8 @@ const DisplayContent = () => {
           <Label className="px-4">Sort By Name</Label>
         </div>
       </div>
-      <div className="w-full p-5 ">
-        <div className="grid grid-cols-4  justify-center items-center gap-10">
+      <div className="w-full p-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 justify-center items-center gap-5">
           {(filteredData.length > 0 ? filteredData : data).map(
             (datas, index) => (
               <GridCard datas={datas} index={index} />
